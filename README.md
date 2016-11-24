@@ -338,6 +338,10 @@ WX_EXPORT_METHOD(@selector(call:withParam:callback:))
 
 
 ## Demo使用流程
+1. clone下项目，在终端切换到项目目录下
+2. 打开Podfile，执行`pod install`，成功则执行
+3. 在终端执行`weex -s .`,启动服务，获取url链接
+4. xcode打开`.xcworkspace`文件
 
 ---------
 [1]:http://alibaba.github.io/weex/doc/tutorial.html
