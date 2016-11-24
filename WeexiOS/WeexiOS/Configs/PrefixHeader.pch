@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  WeexiOS
+//
+//  Created by FallenK on 2016/11/10.
+//  Copyright © 2016年 KFallen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark - 系统文件
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <WeexSDK/WeexSDK.h>
+#import <SDWebImage/SDWebImageManager.h>
+
+#pragma mark - 预加载文件
+
+#import "ETKMacroDefinitions.h"
+#import "CommonMacro.h"
+#import "AppDelegate.h"
+#import "ETKEnumeration.h"
+
+#endif /* PrefixHeader_pch */

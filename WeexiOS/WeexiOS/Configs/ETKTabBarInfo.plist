@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>icon_commonHomeUnSelect</string>
+		<key>selectedIcon</key>
+		<string>icon_commonHomeSelected</string>
+		<key>title</key>
+		<string>首页</string>
+		<key>controller</key>
+		<string>HomeViewController</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon_commonBeautyRankUnSelect</string>
+		<key>selectedIcon</key>
+		<string>icon_commonBeautyRankSelected</string>
+		<key>title</key>
+		<string>颜值排行榜</string>
+		<key>controller</key>
+		<string>ETKSkinCareBoardController</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon_commonSkinCareTipUnSelect</string>
+		<key>selectedIcon</key>
+		<string>icon_commonSkinCareTipSelected</string>
+		<key>title</key>
+		<string>贴士</string>
+		<key>controller</key>
+		<string>ETKSkinCareMessageController</string>
+	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon_commonMeUnSelect</string>
+		<key>selectedIcon</key>
+		<string>icon_commonMeSelected</string>
+		<key>title</key>
+		<string>我</string>
+		<key>controller</key>
+		<string>ETKProfileController</string>
+	</dict>
+</array>
+</plist>
