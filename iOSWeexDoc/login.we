@@ -1,0 +1,63 @@
+<template>
+	<contianer>
+		<div class="login">
+			<div class="phone-panel">
+				<input class="phone-text" type="text" placeholder="手机号"/>
+			</div>
+			<div class="phone-panel">
+				<input class="password-text" type="password" placeholder="密码"/>
+			</div>
+			<div class="phone-panel">
+				<text class="login-button" onclick="getUserInfo">登录</text>
+			</div>
+		</div>
+	</contianer>
+</template>
+
+<style>
+	.login {
+		margin-top: 200px;
+		margin-left: 200px;
+		width: 300px;
+		height: 300px;
+	}
+	.phone-panel {
+		background-color: gray;
+		width: 300px;
+		height: 80px;
+	}
+	.phone-text {
+		background-color: gray;
+		width: 300px;
+		height: 80px;
+		font-size: 25;
+		border-style: solid;
+	}
+	.password-text {
+		width: 300px;
+		height: 80px;
+		font-size: 25;
+		border-style: solid;
+	}
+	.login-button {
+		color: white;
+		border-style: solid;
+		textAlign: center;
+	}
+</style>
+
+<script>
+module.exports = {
+	 methods: {
+        getUserInfo: function() {
+        	var eventModule = require('@weex-module/ETKWeexJumpModule'); 
+  			eventModule.login('skinCareBoarddetail.we', {
+                'phone':'135',
+                'password':'llf'
+        }, function(ret) {   
+      			nativeLog(ret);
+  			});
+        }
+    }
+}
+</script>

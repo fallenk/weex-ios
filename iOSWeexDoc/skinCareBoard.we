@@ -1,0 +1,152 @@
+<template>
+
+  <div style="flex-direction: column;">
+    <slider class="slider" interval="{{intervalValue}}" auto-play="{{isAutoPlay}}" >
+      <div class="slider-pages" repeat="{{itemList}}" onclick="goWeexSite" >
+          <image class="thumb" src="{{pictureUrl}}"></image>
+          <text class="title">{{title}}</text>
+      </div>
+    </slider>
+  <scroller>
+   <div class="container">
+    <refresh class="refresh" onRefresh="handleRefresh" display="{{displayRefresh}}"
+        style="flex-direction:row; background-color: aqua; ">
+        <loading-indicator style="margin-left:36px;"></loading-indicator>
+        <text style="margin-left:80px;color:red;">下拉刷新...</text>
+    </refresh>
+    <div class="cell" onclick="goBaozouDetail">
+        <image class="thumb" src="http://imgsrc.baidu.com/forum/pic/item/d0c8a786c9177f3e8329118870cf3bc79f3d5612.jpg"></image>
+        <text class="title">暴走跳转</text>
+    </div>
+    <div class="cell">
+        <image class="thumb" src="http://img1.gamersky.com/image2013/06/20130604s_2/gamersky_026small_052_201364185A7B.jpg"></image>
+        <kfcustom-button class="weex-button" title="点击内容alertView展现">{this.title}</kfcustom-button>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <div class="cell" onclick="goWeexOC" >
+        <image class="thumb" src="http://wanzao2.b0.upaiyun.com/system/pictures/2999028/original/6708d59938365c3a.jpg"></image>
+        <text class="title">点击输入内容展示</text>
+        <input class="input-value" oninput="onInputCode" ></input>
+    </div>
+    <loading class="loading" onLoading="handleLoading" display="{{displayLoading}}" style="background-color: bisque; ">
+        <text style="color:blue; text-align: center;">加载更多...</text>
+    </loading>
+  </div>
+  </scroller>
+
+</template>
+
+<style>
+  .cell { margin-top:10 ; margin-left:30 ; flex-direction: row; }
+  .thumb { width: 120; height: 120; }
+  .title { text-align: center ; flex: 1; color: grey; font-size: 50; }
+  .weex-button { width: 300; height: 120; }
+  .slider {
+    margin: 18;
+    width: 714;
+    height: 150;
+  }
+  .input-value {
+    width: 200;
+    height: 80;
+    color: blue;
+  }
+  .slider-pages {
+    flex-direction: row;
+    width: 714;
+    height: 200;
+  }
+  .refresh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+
+<script>
+module.exports = {
+    data: {
+      intervalValue:"1000",
+      isShowIndicators:"true",
+      isAutoPlay:"true",
+      itemList: [
+        {title: 'Java', pictureUrl: 'http://t.cn/RGE3uo9'},
+        {title: 'Objective C', pictureUrl: 'http://t.cn/RGE31hq'},
+        {title: 'JavaScript', pictureUrl: 'http://t.cn/RGE3AJt'}
+      ],
+      displayRefresh: 'show',
+      displayLoading: 'show',
+    },
+    methods: {
+      handleRefresh: function (e) {
+        var vm = this
+        vm.displayRefresh = 'show'
+        setTimeout(function () {
+          vm.displayRefresh = 'hide'
+        }, 2000)
+      },
+      handleLoading: function (e) {
+        var vm = this
+        vm.displayLoading = 'show'
+        this.$call('modal', 'toast', {
+          message: 'loading.'
+        })
+        setTimeout(function () {
+          vm.simLoadingData(vm.cnt++)
+          vm.displayLoading = 'hide'
+        }, 2000)
+      },
+      goWeexSite: function () {
+        //this.$openURL('http://alibaba.github.io/weex/')
+          var KFModule = require('@weex-module/KFWeexJumpModule');
+          //传入url
+          KFModule.openURL('tech_list.we');
+      },
+        goBaozouDetail: function() {
+        	var eventModule = require('@weex-module/ETKWeexJumpModule'); 
+  			eventModule.call('skinCareBoarddetail.we', {
+                'title' : ''
+        }, function(ret) {   
+      			nativeLog(ret);
+  			});
+        },
+        onInputCode: function(event) {
+                this.$dispatch('onInputCode', event.value)
+        },
+    }
+}
+</script>

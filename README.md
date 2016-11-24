@@ -334,8 +334,10 @@ WX_EXPORT_METHOD(@selector(call:withParam:callback:))
       2.  下载js包加载，服务端的终端切换到Weex文件夹下，执行`weex ’Weex文件夹该路径‘ -o ‘自己创建的文件夹路径’`，获取所有js的路径，打包。移动端获取该js包下载链接，到本地，解压加载通过的路由该文件。
   2. 移动端本地加载，编译好js文件，引用工程，加载文件
 
-4. 目前建了简单的[Demo](https://git.oschina.net/KFallen/Weex_iOS.git)
+4. 目前建了简单的[Demo](https://github.com/fallenk/weex-ios.git)
 
+
+## Demo使用流程
 
 ---------
 [1]:http://alibaba.github.io/weex/doc/tutorial.html

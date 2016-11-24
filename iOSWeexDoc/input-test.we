@@ -1,0 +1,75 @@
+<template>
+
+    <div class="div" style="height:{{height}};">
+        <input id="input-phone" oninput="onInputPhone" class="input-phone" style="height:{{cellHeight}}" type="tel" autofocus="true" placeholder="{{placeHolderPhone}}"></input>
+        <div style="height:{{cellHeight}};flex-direction: row;">
+            <input oninput="onInputCode" class="input-code" style="height:{{cellHeight}};width:550;" placeholder="{{placeHolderCode}}"></input>
+            <wld-text class="txt-tip" bg-color="#a1dccc" color="white" font-size="30" value="{{btnTip}}" onclick="btnGetCodeClick"></wld-text>
+        </div>
+    </div>
+
+</template>
+
+<style>
+    .div {
+        width: 750;
+        position: relative;
+        background-color: #ffffff;
+        border-top-width: 1;
+        border-top-color: #cccccc;
+    }
+
+    .input-phone {
+        font-size: 30;
+        padding-left: 20;
+        color: #666666;
+    }
+
+    .input-code {
+        font-size: 30;
+        padding-left: 20;
+        color: #666666;
+        background-color: #ffffff;
+        border-top-width: 1;
+        border-bottom-width: 1;
+        border-top-color: #cccccc;
+        border-bottom-color: #cccccc;
+    }
+
+    .txt-tip {
+        width: 200;
+    }
+</style>
+
+<script>
+    require('weex-components')
+    require('ui/common/wld-text.we')
+    var constants = require('util/constants')
+    var utils = require('util/utils')
+
+    module.exports = {
+        data: {
+            placeHolderPhone: "请输入手机号",
+            placeHolderCode: "请输入验证码",
+            btnTip: "获取验证码",
+            cellHeight: "88",
+            phoneNumber: '',
+        },
+        methods: {
+            btnGetCodeClick: function(ref) {
+                var params = {
+                    phoneNumber: this.phoneNumber,
+                }
+                this.$dispatch('btnGetCodeClick', params)
+            },
+
+            onInputPhone: function(event) {
+                this.phoneNumber = event.value
+            },
+
+            onInputCode: function(event) {
+                this.$dispatch('onInputCode', event.value)
+            },
+        }
+    };
+</script>

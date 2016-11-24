@@ -1,0 +1,27 @@
+<template>
+	<div>
+		<image class="thumbnail" src="http://image.coolapk.com/apk_logo/2015/0817/257251_1439790718_385.png"></image>
+		<text class="title" onClick="onClickTitle">Hello weex2222</text>
+		<weex-button class="button" title="helloWeex FallenK">helloWeex FallenK2222</weex-button>
+	</div>
+</template>
+
+<style>
+	.title{color:red}
+    .thumbnail { width:100px; height: 100px; }
+    .button { width:400px; height:100px;}
+</style>
+
+<script>
+	module.exports = {
+		methods:{
+			onClickTitle:function(e) {
+				var KFModule = require('@weex-module/KFWeexModule');
+				//传入url
+				KFModule.call('helloweex.we',{},function(ret) {
+					nativeLog(ret);
+				});
+			}
+		}
+	}
+</script>
