@@ -70,7 +70,7 @@ Weex页面由`<template>`,`<style>`,`<script>`三个部分构成。
 </script>
 ```
 效果图
-![](https://oss-cn-hangzhou.aliyuncs.com/yqfiles/cb4ba278ccfa21abc577af001d6cb8f70301b090.png)
+![image](https://github.com/fallenk/weex-ios/blob/master/image/cb4ba278ccfa21abc577af001d6cb8f70301b090.png)
 
 ##Weex结构语法
 ### `<template>`
