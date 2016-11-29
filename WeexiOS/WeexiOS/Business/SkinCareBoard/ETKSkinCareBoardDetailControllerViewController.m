@@ -22,7 +22,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"暴走详情";
     self.instance.viewController = self;
-    self.instance.frame = CGRectMake(100, 200, self.view.frame.size.width, 400);
+    self.instance.frame = CGRectMake(30, 20, SCREEN_WIDTH, SCREEN_HEIGHT);
     [self.instance renderWithURL:self.URL options:@{@"bundleUrl":self.URL.absoluteString} data:nil];
     
     __weak typeof(self) weakSelf = self;

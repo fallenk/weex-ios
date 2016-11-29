@@ -2,7 +2,7 @@
 
   <div style="flex-direction: column;">
     <slider class="slider" interval="{{intervalValue}}" auto-play="{{isAutoPlay}}" >
-      <div class="slider-pages" repeat="{{itemList}}" onclick="goWeexSite" >
+      <div class="slider-pages" repeat="{{itemList}}" onclick="goWeexSite">
           <image class="thumb" src="{{pictureUrl}}"></image>
           <text class="title">{{title}}</text>
       </div>
@@ -60,8 +60,8 @@
     <loading class="loading" onLoading="handleLoading" display="{{displayLoading}}" style="background-color: bisque; ">
         <text style="color:blue; text-align: center;">加载更多...</text>
     </loading>
+   </scroller>
   </div>
-  </scroller>
 
 </template>
 
@@ -89,11 +89,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 160px;
   }
   .loading {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 160px;
   }
 </style>
 

@@ -34,7 +34,7 @@
 
 - (void)p_initWeexView {
     self.instance.viewController = self;
-    self.instance.frame = CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_WIDTH);
+    self.instance.frame = CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT - TABBAR_HEIGHT);
     NSString *fileName = @"skinCareBoard.we";
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.31.60:8081/%@",fileName]];
     [self.instance renderWithURL:URL options:@{@"bundleUrl" : URL.absoluteString} data:nil];
