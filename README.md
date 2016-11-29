@@ -37,7 +37,7 @@ info Fri Jul 08 2016 14:30:31 GMT+0800 (CST)http  is listening on port 8081
 ```
 
 此时，浏览器会打开一个新的标签页展示helloweex.we的执行效果：
-![](https://oss-cn-hangzhou.aliyuncs.com/yqfiles/72bb37a077170ff1f62b5b7ef9ac42fa5bd24ab3.png)
+![image](https://github.com/fallenk/weex-ios/blob/master/image/596dec84fae845caa3564e78c6d306bd21343650.png)
 可以进行热更新，修改
 
 ###Weex总体结构
