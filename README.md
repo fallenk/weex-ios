@@ -5,7 +5,7 @@
 2. Weex入门使用
 3. Weex语法使用
 4. 集成到iOS工程
-5. Weex进阶
+5. Weex进阶使用
 
 ##Weex环境配置
 我们需要先安装[Node][2]。在Mac上也可以通过[Homebrew](http://brew.sh/index_zh-cn.html)直接进行安装：`brew install node`,接着我们需要安装Weex CLI：`npm install -g weex-toolkit`，并确保版本号大于0.1.0.
