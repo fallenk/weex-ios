@@ -11,7 +11,7 @@
 我们需要先安装[Node][2]。在Mac上也可以通过[Homebrew](http://brew.sh/index_zh-cn.html)直接进行安装：`brew install node`,接着我们需要安装Weex CLI：`npm install -g weex-toolkit`，并确保版本号大于0.1.0.
 
 ```
-    $ weex --version
+    $ weex --version    //查看版本
       info 0.3.4
 ```
 环境配置完成
