@@ -9,6 +9,7 @@ Git has a mutable index called stage.
 
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。git reset --hard HEAD^, git reset HEAD <file>, git checkout -- file
 
+
 add and commit and push in branch release
 
 Git鼓励大量使用分支：
@@ -24,3 +25,6 @@ Git鼓励大量使用分支：
 合并某分支到当前分支：git merge <name>
 
 删除分支：git branch -d <name>
+
+conflict merge and fix
+
